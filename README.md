@@ -49,4 +49,4 @@ Dumps `core` file for futher examanation
 
 -> NO FURTHER TESTING DONE
 
-My assumption is that everything works fine for `php < 8.3` as PHP 8.2 works file (testing done with the same docker image, installing PHP 8.2)
+My assumption is that everything works fine for `php < 8.3` as PHP 8.2 works fine (testing done with the same docker image, installing PHP 8.2)
