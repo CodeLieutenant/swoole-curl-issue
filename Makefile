@@ -40,10 +40,16 @@ install-without-curl:
 		ghcr.io/dmalusev/swoole-issue:$(PHP_VERSION)-without-curl \
 		composer install -vvv --ignore-platform-reqs
 
-.PHONY: update-with-curl
-update-with-curl:
+.PHONY: update-without-curl
+update-without-curl:
 	@docker run --rm \
 		-u "$(shell id -u):$(shell id -g)" \
 		-v "$(shell pwd):/var/www/html" \
-		ghcr.io/dmalusev/swoole-issue:$(PHP_VERSION)-with-curl \
+		ghcr.io/dmalusev/swoole-issue:$(PHP_VERSION)-without-curl \
 		composer update -vvv --ignore-platform-reqs
+
+.PHONY: php-ri
+php-ri:
+	@docker run --rm \
+		ghcr.io/dmalusev/swoole-issue:$(PHP_VERSION)-with-curl \
+		php --ri swoole

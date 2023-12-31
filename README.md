@@ -30,6 +30,7 @@ This command will create TWO docker images -> one with `--enable-swoole-curl` an
 2. `install-with-curl`
 3. `update-with-curl`
 4. `update-without-curl`
+5. `php-ri`
 
 #### Running
 
